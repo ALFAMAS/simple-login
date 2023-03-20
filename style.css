@@ -1,0 +1,116 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f1f1f1;
+	font-family: sans-serif;
+}
+
+.login-box {
+	width: 350px;
+	height: 400px;
+	background-color: #fff;
+	color: #000;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-shadow: 0 5px 15px rgba(0,0,0,.2);
+	padding: 70px 30px;
+}
+
+.login-box h2 {
+	margin: 0 0 30px;
+	padding: 0;
+	font-size: 26px;
+	text-align: center;
+}
+
+.login-box .user-box {
+	position: relative;
+}
+
+.login-box .user-box input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #000;
+	outline: none;
+	background: transparent;
+}
+
+.login-box .user-box label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #000;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+	top: -20px;
+	left: 0;
+	color: #ff9900;
+	font-size: 12px;
+}
+
+.login-box a {
+	display: block;
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border-radius: 25px;
+	background-color: #ff9900;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+.login-box a:hover {
+	background-color: #ffbf00;
+}
+
+.login-box a span {
+	position: absolute;
+	display: block;
+	height: 100%;
+	width: 100%;
+	left: -100%;
+	top: 0;
+	background: linear-gradient(90deg,transparent,#ff9900);
+	animation: wave 1.5s infinite;
+}
+
+.login-box a span:nth-child(2) {
+	animation-delay: .2s;
+}
+
+.login-box a span:nth-child(3) {
+	animation-delay: .4s;
+}
+
+.login-box a span:nth-child(4) {
+	animation-delay: .6s;
+}
+
+@keyframes wave {
+	0% {
+		left: -100%;
+	}
+
+	100% {
+		left: 100%;
+	}
+}
